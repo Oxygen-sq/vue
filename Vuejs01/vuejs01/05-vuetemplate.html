@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-vuetemplate</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<!--前端缩进一般为2个空格-->
+<div id="app">
+  {{message}}
+</div>
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: "hello vue!"
+    }
+  })
+</script>
+
+<!--直接输入vuetemplate，然后Tab，直接出模板-->
+<!--<div id="app">-->
+<!--  {{message}}-->
+<!--</div>-->
+
+<!--<script>-->
+<!--  const app = new Vue({-->
+<!--    el: '#app',-->
+<!--    data: {-->
+<!--      message: "hello vue!"-->
+<!--    }-->
+<!--  })-->
+<!--</script>-->
+
+</body>
+</html>

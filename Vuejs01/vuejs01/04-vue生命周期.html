@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-vue生命周期</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h3>当前计数: {{counter}}</h3>
+    <!--    <button v-on:click = "counter++">+</button>      &lt;!&ndash;   v-on:click 中间不可以加空格&ndash;&gt;-->
+    <!--    <button v-on:click = "counter&#45;&#45;">-</button>-->
+    <button v-on:click="add">+</button>
+    <button v-on:click="sub">-</button>   <!--  @语法糖：简写，v-on 等价于 @-->
+</div>
+<script>
+    let app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+        },
+        methods: {
+            add: function (){
+                console.log("add 被执行！");
+                this.counter++;
+            },
+            sub: function (){
+                console.log("sub 被执行！");
+                this.counter--;
+            }
+        },
+        created: function (){
+            console.log("created！");
+        },
+        mounted: function (){
+            console.log("mounted!");
+        }
+    })
+</script>
+
+</body>
+</html>

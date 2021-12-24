@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-vue列表展示</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <ul>
+        <li>{{movies[0]}}</li>
+        <li>{{movies[1]}}</li>
+        <li>{{movies[2]}}</li>
+        <li>{{movies[3]}}</li>
+    </ul>
+    <hr />
+    <ul>
+        <li v-for = "item in movies">{{item}}</li>
+    </ul>
+</div>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: '你好啊！',
+            movies: ['你好，世界','天气之子','你的名字','秒速五厘米','声之形']
+        }
+    })
+</script>
+
+</body>
+</html>
